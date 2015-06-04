@@ -38,7 +38,7 @@ public class Main extends Application {
             window.setScene(scene1);
         });
 
-        Button buttonAlert = new Button("Alert button");
+        Button buttonAlert = new Button("Alert button updated");
         buttonAlert.setOnAction(event -> {
             boolean result = ConfirmBox.dislay("Alert", "You clicked the confirm button");
             System.out.println(result);
