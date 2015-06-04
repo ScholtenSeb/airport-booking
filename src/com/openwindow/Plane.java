@@ -1,4 +1,4 @@
-package sample;
+package com.openwindow;
 
 import java.util.ArrayList;
 
