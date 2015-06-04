@@ -24,19 +24,21 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         window.setTitle("Airport Booking App");
+        window.setOnCloseRequest(e -> {
+            e.consume();
+            closeProgram();
+        });
+
+
 
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         // create button
         Button button1 = new Button("Goto scene 2");
-        button1.setOnAction(e -> {
-            window.setScene(scene2);
-        });
+        button1.setOnAction(e -> window.setScene(scene2));
 
         Button button2 = new Button("Back to scene 1");
-        button2.setOnAction(e -> {
-            window.setScene(scene1);
-        });
+        button2.setOnAction(e -> window.setScene(scene1));
 
         Button buttonAlert = new Button("Alert button updated");
         buttonAlert.setOnAction(event -> {
@@ -47,6 +49,7 @@ public class Main extends Application {
 
         VBox layout1 = new VBox(20);
         scene1 = new Scene(layout1, 800, 600);
+        scene1.getStylesheets().add("Style.css");
         layout1.getChildren().addAll(button1, buttonAlert);
 
         StackPane layout2 = new StackPane();
@@ -56,8 +59,15 @@ public class Main extends Application {
         window.setScene(scene1);
         window.show();
 
+        //cssButton.getStyleClass().add("blue-button");
+        //cssButton.setID("some-id")
 
 
+
+    }
+
+    private void closeProgram() {
+        window.close();
     }
 
 
