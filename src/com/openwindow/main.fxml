@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="750.0" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.openwindow.Controller">
+   <left>
+      <VBox prefHeight="500.0" prefWidth="299.0">
+         <children>
+            <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="146.0" prefWidth="181.0" spacing="10.0">
+               <children>
+                  <TextField promptText="Passport number" />
+                  <Button mnemonicParsing="false" text="Search" />
+                  <TextField promptText="Destination" />
+                  <Button mnemonicParsing="false" text="Search" />
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="20.0">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <ListView prefHeight="350.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
